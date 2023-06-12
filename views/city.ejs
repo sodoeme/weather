@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .weather-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+      margin: 20px auto;
+    }
+    .weather-card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="weather-card">
+    <h1><%= city.name %></h1>
+<img src="https://openweathermap.org/img/w/<%= city.icon %>.png" alt="">
+    <p>Temperature: <%= city.temp %> °C</p>
+    <p>Humidity: <%= city.humidity %> %</p>
+    <p>Wind Speed: <%= city.wind.speed %> m/s</p>
+    <p>Wind Direction: <%= city.wind.direction %> m/s</p>
+  </div>
+</body>
+</html>
